@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab68a240-1a50-4f3b-aeff-0c6a8ba027a1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lWEJucDU6vaYPVIHNuS9OhaLFb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="LombokPluginEnabledInProject" value="true" />
+    <property name="LombokPluginIS_ANNOTATION_PROCESSING_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_BUILDER_Enabled" value="true" />
+    <property name="LombokPluginIS_CONSTRUCTOR_Enabled" value="true" />
+    <property name="LombokPluginIS_DELEGATE_Enabled" value="true" />
+    <property name="LombokPluginIS_LOG_Enabled" value="true" />
+    <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_MISSING_LOMBOK_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_VAL_Enabled" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.57931036" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mercadolivre.estudo.threads.future" />
+      <recent name="com.mercadolivre.estudo.threads" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mercadolivre/estudo/threads" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AppStarter">
+    <configuration name="AppStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mercadolivre.estudo.threads.mini_framework.a0sample.AppStarter" />
+      <module name="takearest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercadolivre.estudo.threads.mini_framework.a0sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mercadolivre.estudo.threads.mini_framework.Client" />
+      <module name="samples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercadolivre.estudo.threads.mini_framework.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrameworkRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mercadolivre.estudo.threads.mini_framework.core.FrameworkRunner" />
+      <module name="samples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercadolivre.estudo.threads.mini_framework.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaitNotify2Exercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mercadolivre.estudo.threads.WaitNotify2Exercise" />
+      <module name="samples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercadolivre.estudo.threads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaitNotifyExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mercadolivre.estudo.threads.WaitNotifyExercise" />
+      <module name="samples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercadolivre.estudo.threads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.WaitNotifyExercise" />
+      <item itemvalue="Application.WaitNotify2Exercise" />
+      <item itemvalue="Application.FrameworkRunner" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.AppStarter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppStarter" />
+        <item itemvalue="Application.FrameworkRunner" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.WaitNotify2Exercise" />
+        <item itemvalue="Application.WaitNotifyExercise" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab68a240-1a50-4f3b-aeff-0c6a8ba027a1" name="Default Changelist" comment="" />
+      <created>1607704381255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607704381255</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Adding samples of Multi Threading">
+      <created>1610114592133</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610114592133</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding an example of a simple Http Framework">
+      <created>1613129428495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613129428495</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding an example of a simple Http Framework">
+      <created>1613149170066</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613149170066</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding banner to framework startup">
+      <created>1613754042156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613754042156</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding samples of Multi Threading" />
+    <MESSAGE value="Adding an example of a simple Http Framework" />
+    <MESSAGE value="Adding banner to framework startup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding banner to framework startup" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2128" y="121" key="#Project_Structure" timestamp="1611686089453">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2128" y="121" key="#Project_Structure/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1611686089453" />
+    <state x="2104" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610113340933">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2104" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1610113340933" />
+    <state x="2453" y="263" width="683" height="554" key="#com.intellij.ide.util.MemberChooser" timestamp="1613124308040">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2453" y="263" width="683" height="554" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613124308040" />
+    <state x="2403" y="257" width="758" height="566" key="#xdebugger.evaluate" timestamp="1613128016674">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2403" y="257" width="758" height="566" key="#xdebugger.evaluate/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613128016674" />
+    <state x="2203" y="118" width="1099" height="928" key="CommitChangelistDialog2" timestamp="1613754041687">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2203" y="118" width="1099" height="928" key="CommitChangelistDialog2/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613754041687" />
+    <state width="1878" height="426" key="GridCell.Tab.0.bottom" timestamp="1614264203850">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1614264203850" />
+    <state width="1878" height="349" key="GridCell.Tab.0.bottom/0.23.1680.976/1680.23.1920.1057@1680.23.1920.1057" timestamp="1613129358895" />
+    <state width="1878" height="426" key="GridCell.Tab.0.center" timestamp="1614264203848">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1614264203848" />
+    <state width="1878" height="349" key="GridCell.Tab.0.center/0.23.1680.976/1680.23.1920.1057@1680.23.1920.1057" timestamp="1613129358892" />
+    <state width="1878" height="426" key="GridCell.Tab.0.left" timestamp="1614264203843">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1614264203843" />
+    <state width="1878" height="349" key="GridCell.Tab.0.left/0.23.1680.976/1680.23.1920.1057@1680.23.1920.1057" timestamp="1613129358891" />
+    <state width="1878" height="426" key="GridCell.Tab.0.right" timestamp="1614264203849">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="426" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1614264203849" />
+    <state width="1878" height="349" key="GridCell.Tab.0.right/0.23.1680.976/1680.23.1920.1057@1680.23.1920.1057" timestamp="1613129358893" />
+    <state width="1878" height="34" key="GridCell.Tab.1.bottom" timestamp="1613156653490">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="34" key="GridCell.Tab.1.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613156653490" />
+    <state width="1878" height="34" key="GridCell.Tab.1.center" timestamp="1613156653488">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="34" key="GridCell.Tab.1.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613156653488" />
+    <state width="1878" height="34" key="GridCell.Tab.1.left" timestamp="1613156653487">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="34" key="GridCell.Tab.1.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613156653487" />
+    <state width="1878" height="34" key="GridCell.Tab.1.right" timestamp="1613156653489">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="34" key="GridCell.Tab.1.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613156653489" />
+    <state x="2149" y="179" key="SettingsEditor" timestamp="1610101495205">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2149" y="179" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1610101495205" />
+    <state x="2240" y="280" key="Vcs.Push.Dialog.v2" timestamp="1613754046881">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2240" y="280" key="Vcs.Push.Dialog.v2/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1613754046881" />
+    <state x="2347" y="295" width="590" height="490" key="find.popup" timestamp="1614277068323">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2347" y="295" width="590" height="490" key="find.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1614277068323" />
+    <state x="2480" y="330" key="refactoring.ChangeSignatureDialog" timestamp="1611942607786">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2480" y="330" key="refactoring.ChangeSignatureDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1611942607786" />
+    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1611942587809">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1611942587809" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mercadolivre/estudo/threads/pool/matrix/ScheduledThreadPoolExecutor.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mercadolivre/estudo/threads/pool/matrix/ScheduledThreadPoolExecutor.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mercadolivre/estudo/threads/pool/matrix/ScheduledThreadPoolExecutor.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

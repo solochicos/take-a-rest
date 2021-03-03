@@ -3,8 +3,6 @@ package com.mercadolivre.estudo.threads.mini_framework.core;
 import com.mercadolivre.estudo.threads.mini_framework.async.AsyncManager;
 import com.mercadolivre.estudo.threads.mini_framework.utils.Logger;
 import com.sun.net.httpserver.HttpServer;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -12,6 +10,7 @@ import java.net.InetSocketAddress;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class PooledHttpServer {
 
@@ -70,9 +69,42 @@ public class PooledHttpServer {
                     outputStream.flush();
                     outputStream.close();
                 } else {
-                    throw new NotImplementedException();
+                    if ("POST".equals(httpExchange.getRequestMethod()) && "POST".equalsIgnoreCase(controller.httpMethod)) {
+                        String[] uriBlocks = httpExchange.getRequestURI().toString().split("\\?");
+                        if(uriBlocks.length > 1) {
+                            queryParams = uriBlocks[1].split("&");
+                        }
+                        String response = "";
+                        try {
+                            Object classInstance = controller.javaClass.getDeclaredConstructor(AsyncManager.class).newInstance(manager);
+
+                            HashMap<String, String> queryParamsMap = new HashMap<>();
+                            Arrays.stream(queryParams).forEach(queryParam -> {
+                                String[] queryParamTuple = queryParam.split("=");
+                                queryParamsMap.put(queryParamTuple[0], queryParamTuple[1]);
+                            });
+                            response = (String) controller.method.invoke(classInstance, queryParamsMap);
+                        } catch (IllegalAccessException e) {
+                            e.printStackTrace();
+                        } catch (InvocationTargetException e) {
+                            e.printStackTrace();
+                        } catch (InstantiationException e) {
+                            e.printStackTrace();
+                        } catch (NoSuchMethodException e) {
+                            e.printStackTrace();
+                        }
+
+                        OutputStream outputStream = httpExchange.getResponseBody();
+                        httpExchange.getResponseHeaders().add("content-type", "application/json");
+                        httpExchange.sendResponseHeaders(200, response.length());
+                        outputStream.write(response.getBytes());
+                        outputStream.flush();
+                        outputStream.close();
+                    } else {
+                        throw new NotImplementedException();
+                    }
                 }
-            });
+                });
         });
     }
 

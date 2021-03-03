@@ -3,8 +3,8 @@ package com.mercadolivre.estudo.threads.mini_framework.a0sample;
 import com.mercadolivre.estudo.threads.mini_framework.async.AsyncManager;
 import com.mercadolivre.estudo.threads.mini_framework.core.RequestBody;
 import com.mercadolivre.estudo.threads.mini_framework.core.RestController;
+import com.mercadolivre.estudo.threads.mini_framework.entity.Message;
 import com.mercadolivre.estudo.threads.mini_framework.utils.Logger;
-
 import com.mercadolivre.estudo.threads.mini_framework.utils.RequestMethod;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
@@ -56,10 +56,21 @@ public class HelloEntrypoint {
         return response.toString();
     }
 
-    @RestController(path = "/saveAny", method = RequestMethod.POST)
-    public String saveAny(@RequestBody String data) {
-        Logger.log("Request received on /saveAny with requestBody: " + data, "Strings Entrypoint");
-        return "{ \"data\": \"" + data + "\" }";
+    @RestController(path = "/saveMessage", method = RequestMethod.POST)
+    public String save(@RequestBody HashMap<String, String> queryParams) {
+        Message msg = new Message();
+        StringBuilder response = new StringBuilder();
+
+        response.append("[\n");
+        queryParams.keySet().forEach(key -> {
+            response.append("\""+key+"\": \""+ queryParams.get(key) +"\",\n");
+        });
+        response.append("]");
+
+        msg.setMsg(response.toString());
+
+        Logger.log("Request received on /saveMessage with requestBody: " + queryParams, "Strings Entrypoint");
+        return "{ \"id\": \"" + msg.getId() + "\" ,\"message:\": \"" + msg.getMsg() + "\" }";
     }
 
 }

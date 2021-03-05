@@ -7,6 +7,7 @@ import com.mercadolivre.estudo.threads.mini_framework.entity.Message;
 import com.mercadolivre.estudo.threads.mini_framework.utils.Logger;
 import com.mercadolivre.estudo.threads.mini_framework.utils.RequestMethod;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -57,20 +58,12 @@ public class HelloEntrypoint {
     }
 
     @RestController(path = "/saveMessage", method = RequestMethod.POST)
-    public String save(@RequestBody HashMap<String, String> queryParams) {
-        Message msg = new Message();
-        StringBuilder response = new StringBuilder();
+    public String saveMessage(@RequestBody(body = "Save any message") Message message) {
+        final int id = new Random().nextInt(10000);
+        message.setId(id);
 
-        response.append("[\n");
-        queryParams.keySet().forEach(key -> {
-            response.append("\""+key+"\": \""+ queryParams.get(key) +"\",\n");
-        });
-        response.append("]");
-
-        msg.setMsg(response.toString());
-
-        Logger.log("Request received on /saveMessage with requestBody: " + queryParams, "Strings Entrypoint");
-        return "{ \"id\": \"" + msg.getId() + "\" ,\"message:\": \"" + msg.getMsg() + "\" }";
+        Logger.log("Request received on /saveMessage - Strings Entrypoint");
+        return "{ \"id\": \"" + id + "\"}";
     }
 
 }

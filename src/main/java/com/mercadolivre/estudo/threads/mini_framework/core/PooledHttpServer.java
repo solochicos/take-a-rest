@@ -70,33 +70,12 @@ public class PooledHttpServer {
                     outputStream.close();
                 } else {
                     if ("POST".equals(httpExchange.getRequestMethod()) && "POST".equalsIgnoreCase(controller.httpMethod)) {
-                        String[] uriBlocks = httpExchange.getRequestURI().toString().split("\\?");
-                        if(uriBlocks.length > 1) {
-                            queryParams = uriBlocks[1].split("&");
-                        }
-                        String response = "";
-                        try {
-                            Object classInstance = controller.javaClass.getDeclaredConstructor(AsyncManager.class).newInstance(manager);
-
-                            HashMap<String, String> queryParamsMap = new HashMap<>();
-                            Arrays.stream(queryParams).forEach(queryParam -> {
-                                String[] queryParamTuple = queryParam.split("=");
-                                queryParamsMap.put(queryParamTuple[0], queryParamTuple[1]);
-                            });
-                            response = (String) controller.method.invoke(classInstance, queryParamsMap);
-                        } catch (IllegalAccessException e) {
-                            e.printStackTrace();
-                        } catch (InvocationTargetException e) {
-                            e.printStackTrace();
-                        } catch (InstantiationException e) {
-                            e.printStackTrace();
-                        } catch (NoSuchMethodException e) {
-                            e.printStackTrace();
-                        }
+                        String response = httpExchange.getRequestBody().toString();
 
                         OutputStream outputStream = httpExchange.getResponseBody();
-                        httpExchange.getResponseHeaders().add("content-type", "application/json");
-                        httpExchange.sendResponseHeaders(200, response.length());
+                        httpExchange.getResponseHeaders()
+                            .add("content-type", "application/json");
+                        httpExchange.sendResponseHeaders(201, response.length());
                         outputStream.write(response.getBytes());
                         outputStream.flush();
                         outputStream.close();
@@ -104,7 +83,7 @@ public class PooledHttpServer {
                         throw new NotImplementedException();
                     }
                 }
-                });
+            });
         });
     }
 

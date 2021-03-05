@@ -5,12 +5,12 @@ import com.mercadolivre.estudo.threads.mini_framework.async.AsyncManager;
 import com.mercadolivre.estudo.threads.mini_framework.utils.AnnotationUtils;
 import com.mercadolivre.estudo.threads.mini_framework.utils.ClassUtils;
 import com.mercadolivre.estudo.threads.mini_framework.utils.Logger;
-
-import com.mercadolivre.estudo.threads.mini_framework.utils.RequestMethod;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class FrameworkRunner {
 
@@ -42,8 +42,13 @@ public class FrameworkRunner {
             annotatedMethods.forEach(annotatedMethod -> {
                 String httpMethod = annotatedMethod.getAnnotation(RestController.class).method().toString();
                 String httpUri = annotatedMethod.getAnnotation(RestController.class).path();
-
-                controllers.add(new Controller(httpMethod, httpUri, controllerClass, annotatedMethod));
+                String bodyOptional;
+                try {
+                    bodyOptional = annotatedMethod.getAnnotation(RequestBody.class).body();
+                } catch (NullPointerException e) {
+                    bodyOptional = "";
+                }
+                controllers.add(new Controller(httpMethod, httpUri, controllerClass, annotatedMethod, bodyOptional));
             });
         });
 
@@ -70,17 +75,19 @@ public class FrameworkRunner {
 
     public class Controller {
 
-        public Controller(String httpMethod, String uri, Class javaClass, Method method) {
+        public Controller(String httpMethod, String uri, Class javaClass, Method method, String bodyOptional) {
             this.httpMethod = httpMethod;
             this.uri = uri;
             this.javaClass = javaClass;
             this.method = method;
+            this.bodyOptional = bodyOptional;
         }
 
         String httpMethod;
         String uri;
         Class javaClass;
         Method method;
+        String bodyOptional;
 
         @Override
         public String toString() {
@@ -89,6 +96,7 @@ public class FrameworkRunner {
                     ", uri='" + uri + '\'' +
                     ", javaClass=" + javaClass +
                     ", method=" + method +
+                    ", body=" + bodyOptional +
                     '}';
         }
     }

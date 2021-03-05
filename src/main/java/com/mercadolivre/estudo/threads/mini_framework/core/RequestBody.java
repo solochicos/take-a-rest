@@ -10,4 +10,5 @@ import java.lang.annotation.Target;
 public @interface RequestBody {
 
     boolean required() default true;
+    String body();
 }

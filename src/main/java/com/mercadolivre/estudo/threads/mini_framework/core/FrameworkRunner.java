@@ -42,13 +42,7 @@ public class FrameworkRunner {
             annotatedMethods.forEach(annotatedMethod -> {
                 String httpMethod = annotatedMethod.getAnnotation(RestController.class).method().toString();
                 String httpUri = annotatedMethod.getAnnotation(RestController.class).path();
-                String bodyOptional;
-                try {
-                    bodyOptional = annotatedMethod.getAnnotation(RequestBody.class).body();
-                } catch (NullPointerException e) {
-                    bodyOptional = "";
-                }
-                controllers.add(new Controller(httpMethod, httpUri, controllerClass, annotatedMethod, bodyOptional));
+                controllers.add(new Controller(httpMethod, httpUri, controllerClass, annotatedMethod));
             });
         });
 
@@ -75,19 +69,17 @@ public class FrameworkRunner {
 
     public class Controller {
 
-        public Controller(String httpMethod, String uri, Class javaClass, Method method, String bodyOptional) {
+        public Controller(String httpMethod, String uri, Class javaClass, Method method) {
             this.httpMethod = httpMethod;
             this.uri = uri;
             this.javaClass = javaClass;
             this.method = method;
-            this.bodyOptional = bodyOptional;
         }
 
         String httpMethod;
         String uri;
         Class javaClass;
         Method method;
-        String bodyOptional;
 
         @Override
         public String toString() {
@@ -96,7 +88,6 @@ public class FrameworkRunner {
                     ", uri='" + uri + '\'' +
                     ", javaClass=" + javaClass +
                     ", method=" + method +
-                    ", body=" + bodyOptional +
                     '}';
         }
     }

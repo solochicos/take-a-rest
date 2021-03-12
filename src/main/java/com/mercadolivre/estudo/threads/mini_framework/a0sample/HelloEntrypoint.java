@@ -1,13 +1,10 @@
 package com.mercadolivre.estudo.threads.mini_framework.a0sample;
 
 import com.mercadolivre.estudo.threads.mini_framework.async.AsyncManager;
-import com.mercadolivre.estudo.threads.mini_framework.core.RequestBody;
 import com.mercadolivre.estudo.threads.mini_framework.core.RestController;
-import com.mercadolivre.estudo.threads.mini_framework.entity.Message;
 import com.mercadolivre.estudo.threads.mini_framework.utils.Logger;
 import com.mercadolivre.estudo.threads.mini_framework.utils.RequestMethod;
 import java.util.HashMap;
-import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -58,12 +55,9 @@ public class HelloEntrypoint {
     }
 
     @RestController(path = "/saveMessage", method = RequestMethod.POST)
-    public String saveMessage(@RequestBody(body = "Save any message") Message message) {
-        final int id = new Random().nextInt(10000);
-        message.setId(id);
-
-        Logger.log("Request received on /saveMessage - Strings Entrypoint");
-        return "{ \"id\": \"" + id + "\"}";
+    public String saveMessage(HashMap<String, String> queryParams, String body) {
+        Logger.log("Request received on /saveMessage with params ["+queryParams.keySet()+"]", "Strings Entrypoint");
+        return body;
     }
 
 }
